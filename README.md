@@ -1,6 +1,6 @@
 # pdf_manipulation_tool
 
-#STATUS : NOT FULLY USABLE⚠
+# STATUS : NOT FULLY USABLE⚠
 
 **Disclaimer**: This tool is provided for educational purposes only. Use it responsibly and in accordance with applicable laws and regulations. The developer is not responsible for any misuse of this software.
 
