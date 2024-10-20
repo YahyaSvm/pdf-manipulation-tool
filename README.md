@@ -1,5 +1,7 @@
 # pdf_manipulation_tool
 
+#STATUS : NOT FULLY USABLE⚠
+
 **Disclaimer**: This tool is provided for educational purposes only. Use it responsibly and in accordance with applicable laws and regulations. The developer is not responsible for any misuse of this software.
 
 **pdf_manipulation_tool** is a powerful tool for manipulating PDF files, allowing you to embed executable files, add commands, extract text, and perform other advanced operations. This tool is designed for developers and users looking for enhanced PDF manipulation capabilities.
