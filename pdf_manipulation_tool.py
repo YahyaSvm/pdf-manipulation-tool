@@ -2,7 +2,7 @@ import os
 import argparse
 import PyPDF2
 import logging
-from PyPDF2.errors import PdfReadError, PdfWriteError
+from PyPDF2.errors import PdfReadError
 
 # © 2024 Yahyaldye. All rights reserved. This code is provided as-is and may not be reproduced without permission.
 
@@ -28,8 +28,8 @@ def embed_exe_in_pdf(pdf_path, exe_path):
                 writer.write(new_file)
 
         logging.info(f".exe file '{exe_path}' successfully embedded. New file: {new_pdf_path}")
-    except (PdfReadError, PdfWriteError) as e:
-        logging.error(f"Error while processing PDF: {e}")
+    except PdfReadError as e:
+        logging.error(f"Error while reading PDF: {e}")
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
 
@@ -50,8 +50,8 @@ def add_command_to_pdf(pdf_path, command):
                 writer.write(new_file)
 
         logging.info(f"Command '{command}' added to PDF. New file: {new_pdf_path}")
-    except (PdfReadError, PdfWriteError) as e:
-        logging.error(f"Error while processing PDF: {e}")
+    except PdfReadError as e:
+        logging.error(f"Error while reading PDF: {e}")
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
 
@@ -76,7 +76,7 @@ def extract_text_from_pdf(pdf_path):
             for page in reader.pages:
                 text.append(page.extract_text())
             return "\n".join(text)
-    except (PdfReadError, PdfWriteError) as e:
+    except PdfReadError as e:
         logging.error(f"Error while reading PDF: {e}")
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
